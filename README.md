@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyP3Vntf2Pqe2LPrZbYCjcHG",
+      "authorship_tag": "ABX9TyM4hSOSqZmnty227wx9iK9o",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -29,76 +29,89 @@
     {
       "cell_type": "markdown",
       "source": [
-        "#Actividad 1\n",
+        "#ACTIVIDAD 2\n",
         "Nombre: Hector Daniel Camacho Lopez\n",
         "\n",
         "Matricula: 372239\n",
         "\n",
         "Grupo: 432\n",
         "\n",
-        "Fecha: 13 de Agosto de 2023"
+        "Fecha: 22 de Agosto de 2023"
       ],
       "metadata": {
-        "id": "MQvbKsfY-3Qz"
+        "id": "6jzzifQ0MIHk"
       }
     },
     {
       "cell_type": "markdown",
       "source": [
-        "1.-Programa en Python que muestra un mensaje que dice \"HOLA MUNDO\" en un solo renglon usando 2 print"
+        "1.- Programa en Python que lee 2 números enteros, usa una condición y analizar los dos números y despliega cual de los números es el mayor"
       ],
       "metadata": {
-        "id": "bdX-Vkn-AykX"
+        "id": "5whctcsOMfXW"
       }
     },
     {
       "cell_type": "code",
-      "source": [
-        "print(\"HOLA\", end=\"\")\n",
-        "print(\" MUNDO\")"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "wPFAD9UY_wv6",
-        "outputId": "03e5688c-02b8-4e70-f1f6-97b1c8488a9a"
+        "id": "kGP2fnvmL8rC",
+        "outputId": "da143385-75c5-48dc-9a0d-4ffa2452a3a3"
       },
-      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "HOLA MUNDO\n"
+            "Deme dos numeros distintos:\n",
+            "Deme el primer numero: 10\n",
+            "Deme el segundo numero: 4\n",
+            "El numero mayor es 10.0\n"
           ]
         }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
-        "2.-Programa en Python que lea dos numeros, realice la suma y despliegue la suma de los 2 numeros"
       ],
-      "metadata": {
-        "id": "scEuKn9QCU9p"
-      }
-    },
-    {
-      "cell_type": "code",
       "source": [
-        "\n",
+        "print(\"Deme dos numeros distintos:\" )\n",
         "num1 = float(input(\"Deme el primer numero: \"))\n",
         "num2 = float(input(\"Deme el segundo numero: \"))\n",
-        "suma = num1 + num2\n",
-        "print(f\"La suma de los dos numeros es: {suma}\")"
+        "if num1 < num2:\n",
+        "  print(f\"El numero mayor es {num2}\")\n",
+        "if num1 > num2:\n",
+        "  print(f\"El numero mayor es {num1}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.- Programa en Python que lee 4 calificaciones de un alumno, calcula y despliega el promedio acompañado de la leyenda \"APROBADO\" o \"REPROBADO\""
+      ],
+      "metadata": {
+        "id": "Rbcsi1WNOAvi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Calculando promedio del alumno\")\n",
+        "cali1 = float(input(\"Cual es la primera calificacion?\"))\n",
+        "cali2 = float(input(\"Cual es la segunda calificacion?\"))\n",
+        "cali3 = float(input(\"Cual es la tercera calificacion?\"))\n",
+        "cali4 = float(input(\"Cual es la cuarta calificacion?\"))\n",
+        "prom = (cali1 + cali2 + cali3 + cali4) / 4\n",
+        "if prom < 60:\n",
+        "  print(f\"REPROBADO - Promedio: {prom}\")\n",
+        "if prom >= 60:\n",
+        "  print(f\"APROBADO - Promedio: {prom}\")"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "_lEA64gQCoUp",
-        "outputId": "fd64e61c-3ff1-4a3d-a4c4-4eff3e2c6d4e"
+        "id": "8XO2BXrrOr-i",
+        "outputId": "0b5d62eb-6da0-4012-faab-fb090b7902df"
       },
       "execution_count": null,
       "outputs": [
@@ -106,10 +119,12 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Suma de dos numeros\n",
-            "Deme el primer numero: 2\n",
-            "Deme el segundo numero: 3\n",
-            "La suma de los dos numeros es: 5\n"
+            "Calculando promedio del alumno\n",
+            "Cual es la primera calificacion?60\n",
+            "Cual es la segunda calificacion?60\n",
+            "Cual es la tercera calificacion?60\n",
+            "Cual es la cuarta calificacion?60\n",
+            "APROBADO - Promedio: 60.0\n"
           ]
         }
       ]
@@ -117,33 +132,109 @@
     {
       "cell_type": "markdown",
       "source": [
-        "3.-Programa en Python que lea 2 numeros y realice las 4 operaciones basicas"
+        "3.- Programa en Python que a través de opciones (1.- HOMBRE 2.- MUJER ) pregunta al usuario cual es su sexo y desplega la leyenda “HOMBRE ”, “MUJER”"
       ],
       "metadata": {
-        "id": "L-VfSko-Gcmw"
+        "id": "Y1jNoxpGTWd3"
       }
     },
     {
       "cell_type": "code",
       "source": [
-        "\n",
+        "print(\"Elije uno de los dos numeros dependiendo si eres hombre o mujer:\")\n",
+        "print(\"1-Hombre\")\n",
+        "print(\"2-Mujer\")\n",
+        "sexo = int(input(\"Elige un numero: \"))\n",
+        "if sexo == 1:\n",
+        "  print(\"Eres Hombre\")\n",
+        "if sexo == 2:\n",
+        "  print(\"Eres Mujer\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FT8AvVfWS4qW",
+        "outputId": "ec955038-ff67-41cd-bdd7-949611bd7c2b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Elije uno de los dos numeros dependiendo si eres hombre o mujer:\n",
+            "1-Hombre\n",
+            "2-Mujer\n",
+            "Elige un numero: 1\n",
+            "Eres Hombre\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.- Programa en Python que lee un número entero, y despliega si el número es “PAR” o “IMPAR”"
+      ],
+      "metadata": {
+        "id": "TX_pSlJmdtzI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"Digita un numero entero: \"))\n",
+        "if num%2 == 0:\n",
+        "  print(\"El numero que digito es par\")\n",
+        "if num%2 == 1:\n",
+        "  print(\"El numero que digito es impar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RnxjM-w8ecQ2",
+        "outputId": "d4b53fb3-d1c0-49e9-9783-267ac576dfa0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digita un numero entero: 112\n",
+            "El numero que digito es par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.- Programa en Python que lee 2 números enteros, usa una condición y analiza los dos números y despliega cual de los números es el mayor."
+      ],
+      "metadata": {
+        "id": "gXXQXv1bgNer"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Deme dos numeros distintos:\" )\n",
         "num1 = float(input(\"Deme el primer numero: \"))\n",
         "num2 = float(input(\"Deme el segundo numero: \"))\n",
-        "suma = num1 + num2\n",
-        "mult = num1 * num2\n",
-        "div = num1 / num2\n",
-        "rest = num1 - num2\n",
-        "print(f\"El resultado de la suma es {suma}\")\n",
-        "print(f\"El resultado de la multiplicacion es {mult}\")\n",
-        "print(f\"El resultado de la division es {div}\")\n",
-        "print(f\"El resultado de la resta es {rest}\")"
+        "if num1 < num2:\n",
+        "  print(f\"El numero mayor es {num2}\")\n",
+        "else:\n",
+        "  print(f\"El numero mayor es {num1}\")"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "j3eTal-wHbvb",
-        "outputId": "79de2852-d619-492b-a205-aa8655b5695d"
+        "id": "GWuAHB5Jgs32",
+        "outputId": "eda7dd22-ef7b-40e6-cf73-527149bb61f9"
       },
       "execution_count": null,
       "outputs": [
@@ -151,13 +242,10 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Las 4 operaciones basicas\n",
-            "Deme el primer numero: 4\n",
-            "Deme el segundo numero: 2\n",
-            "El resultado de la suma es 6\n",
-            "El resultado de la multiplicacion es 8\n",
-            "El resultado de la division es 2.0\n",
-            "El resultado de la resta es 2\n"
+            "Deme dos numeros distintos:\n",
+            "Deme el primer numero: 34\n",
+            "Deme el segundo numero: 21\n",
+            "El numero mayor es 34.0\n"
           ]
         }
       ]
@@ -165,26 +253,32 @@
     {
       "cell_type": "markdown",
       "source": [
-        "4.-Programa en Python que sirve para calcular el area de un triangulo"
+        "6.- Programa en Python que lee 4 calificaciones de un alumno, calcula y despliega el promedio acompañado de la leyenda \"APROBADO\" o \"REPROBADO"
       ],
       "metadata": {
-        "id": "DYYXArkbGvXO"
+        "id": "lPikK7bSipf1"
       }
     },
     {
       "cell_type": "code",
       "source": [
-        "base = float(input(\"Deme la base del triangulo: \"))\n",
-        "altura = float(input(\"Deme la altura del triangulo: \"))\n",
-        "area = (base * altura) / 2\n",
-        "print(f\"El area del triangulo es de {area}\")"
+        "print(\"Calculando promedio del alumno\")\n",
+        "cali1 = float(input(\"Cual es la primera calificacion?\"))\n",
+        "cali2 = float(input(\"Cual es la segunda calificacion?\"))\n",
+        "cali3 = float(input(\"Cual es la tercera calificacion?\"))\n",
+        "cali4 = float(input(\"Cual es la cuarta calificacion?\"))\n",
+        "prom = (cali1 + cali2 + cali3 + cali4) / 4\n",
+        "if prom < 60:\n",
+        "  print(f\"REPROBADO - Promedio: {prom}\")\n",
+        "else:\n",
+        "  print(f\"APROBADO - Promedio: {prom}\")"
       ],
       "metadata": {
-        "id": "OGdGMbxRHA74",
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "f327a431-d566-40e4-bca2-091cdae8a19d"
+        "id": "uQPLSpZwishB",
+        "outputId": "e6a9b309-1086-4d42-d833-b23ef91373ee"
       },
       "execution_count": null,
       "outputs": [
@@ -192,9 +286,12 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Deme la base del triangulo: 4\n",
-            "Deme la altura del triangulo: 2\n",
-            "El area del triangulo es de 4.0\n"
+            "Calculando promedio del alumno\n",
+            "Cual es la primera calificacion?60\n",
+            "Cual es la segunda calificacion?60\n",
+            "Cual es la tercera calificacion?60\n",
+            "Cual es la cuarta calificacion?60\n",
+            "APROBADO - Promedio: 60.0\n"
           ]
         }
       ]
@@ -202,27 +299,30 @@
     {
       "cell_type": "markdown",
       "source": [
-        "5.Programa en Python que lee una medida en centimetros y despliega la misma medida pero convertida en pies y pulgadas"
+        "7.- Programa en Python que a través de opciones (1.- HOMBRE 2.- MUJER ) pregunta al usuario cual es su sexo y desplega la leyenda “HOMBRE ”, “MUJER”"
       ],
       "metadata": {
-        "id": "kCHSo6IOJEp-"
+        "id": "SS49nYcIjPEr"
       }
     },
     {
       "cell_type": "code",
       "source": [
-        "cm = float(input(\"Cuantos centimetros quiere convertir? \"))\n",
-        "plg = cm / 2.54\n",
-        "pies = cm / 30.48\n",
-        "print(f\"{cm} centimetros son {plg} pulgadas\")\n",
-        "print(f\"{cm} centimetros son {pies} pies\")"
+        "print(\"Elije uno de los dos numeros dependiendo si eres hombre o mujer:\")\n",
+        "print(\"1-Hombre\")\n",
+        "print(\"2-Mujer\")\n",
+        "sexo = int(input(\"Elige un numero: \"))\n",
+        "if sexo == 1:\n",
+        "  print(\"Eres Hombre\")\n",
+        "else:\n",
+        "  print(\"Eres Mujer\")"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "b_xbNSv0JfTN",
-        "outputId": "2d315864-4436-451f-dd98-d12e7f385026"
+        "id": "Vvw6obJ1jSsd",
+        "outputId": "3126975c-daac-4dac-c9dc-cd18faf86eb1"
       },
       "execution_count": null,
       "outputs": [
@@ -230,9 +330,11 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Cuantos centimetros quiere convertir? 10\n",
-            "10.0 centimetros son 3.937007874015748 pulgadas\n",
-            "10.0 centimetros son 0.32808398950131235 pies\n"
+            "Elije uno de los dos numeros dependiendo si eres hombre o mujer:\n",
+            "1-Hombre\n",
+            "2-Mujer\n",
+            "Elige un numero: 1\n",
+            "Eres Hombre\n"
           ]
         }
       ]
@@ -240,27 +342,28 @@
     {
       "cell_type": "markdown",
       "source": [
-        "6.-Programa en Python que lee una temperatura en grados centigrados y despliega en grados Fahrenheit y grados kelvin"
+        "8.- Programa en Python que lee un número entero, y despliega si el número es “PAR” o “IMPAR”\n",
+        "\n"
       ],
       "metadata": {
-        "id": "X57w-0BtLzMt"
+        "id": "yhQdLRmLjkT0"
       }
     },
     {
       "cell_type": "code",
       "source": [
-        "cent = float(input(\"Cuantos grados centigrados quiere convertir? \"))\n",
-        "fahre = cent * (9/5) + 32\n",
-        "kelv = cent + 273.15\n",
-        "print(f\"{cent} grados celsius son {fahre} grados Fahrenheit\")\n",
-        "print(f\"{cent} grados celsius son {kelv} grados kelvin\")"
+        "num = int(input(\"Digita un numero entero: \"))\n",
+        "if num%2 == 0:\n",
+        "  print(\"El numero que digito es par\")\n",
+        "else:\n",
+        "  print(\"El numero que digito es impar\")"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "zW_dhciEMQKc",
-        "outputId": "a9b8a501-8311-471f-b46d-b23d848ffd11"
+        "id": "ke9KqQt7jn2m",
+        "outputId": "aecefcdb-b189-4f74-d4a8-03cdc999cf8d"
       },
       "execution_count": null,
       "outputs": [
@@ -268,50 +371,8 @@
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Cuantos grados centigrados quiere convertir? 10\n",
-            "10.0 grados celsius son 50.0 grados Fahrenheit\n",
-            "10.0 grados celsius son 283.15 grados kelvin\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
-        "7.-Programa en Python que lee 4 calificaciones de un alumno, y despliega el promedio del alumno"
-      ],
-      "metadata": {
-        "id": "BSGT761dOaUX"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "cal1 = int(input(\"Cual es la primera calificacion? \"))\n",
-        "cal2 = int(input(\"Cual es la segunda calificacion? \"))\n",
-        "cal3 = int(input(\"Cual es la tercera calificacion? \"))\n",
-        "cal4 = int(input(\"Cual es la cuarta calificacion? \"))\n",
-        "prom = (cal1 + cal2 +cal3 +cal4) / 4\n",
-        "print(f\"El promedio del alumno es {prom}\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "4gEaDRLDOpj6",
-        "outputId": "dcdf4577-5701-4871-cca2-1a7215fe3d5c"
-      },
-      "execution_count": null,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Cual es la primera calificacion? 100\n",
-            "Cual es la segunda calificacion? 87\n",
-            "Cual es la tercera calificacion? 76\n",
-            "Cual es la cuarta calificacion? 100\n",
-            "El promedio del alumno es 90.75\n"
+            "Digita un numero entero: 115\n",
+            "El numero que digito es impar\n"
           ]
         }
       ]
