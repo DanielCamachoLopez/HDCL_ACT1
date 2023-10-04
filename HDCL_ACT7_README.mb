@@ -1,0 +1,415 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPzBufp4IG5I4xaCTs/IaLq",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DanielCamachoLopez/HDCL_ACT1/blob/main/HDCL_ACT7_README.mb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#ACTIVIDAD 7\n",
+        "\n",
+        "Nombre: Hector Daniel Camacho Lopez\n",
+        "\n",
+        "Matricula: 372239\n",
+        "\n",
+        "Grupo: 432\n",
+        "\n",
+        "Fecha: Ensenada, Baja California a 25 de Septiembre de 2023\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "gCCf4CbTQ6qW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.-Funcion que utilice una lista con los nombres de tus mascotas, o artistas favoritos.(minumo 5, maximo 10)"
+      ],
+      "metadata": {
+        "id": "zZc5zfZ4RVV8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uFB5RbV7Ps8r",
+        "outputId": "73a5d06f-9c54-47c1-db38-9417b3fcbda4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cuantos nombres de mascotas y/o cantantes deseas ingresar? (Minimo 5 y maximo 10)5\n",
+            "Ingrese el nombre Venus\n",
+            "Ingrese el nombre Thor\n",
+            "Ingrese el nombre Sandor\n",
+            "Ingrese el nombre Thyson\n",
+            "Ingrese el nombre Osi\n",
+            "[1]-Venus\n",
+            "[2]-Thor\n",
+            "[3]-Sandor\n",
+            "[4]-Thyson\n",
+            "[5]-Osi\n"
+          ]
+        }
+      ],
+      "source": [
+        "lista = []\n",
+        "def nombres():\n",
+        "  try:\n",
+        "    n = int(input(\"Cuantos nombres de mascotas y/o cantantes deseas ingresar? (Minimo 5 y maximo 10)\"))\n",
+        "    if n < 5 or n > 10:\n",
+        "      raise ValueError(\"ERROR, valores fuera del rango establecido\")\n",
+        "  except ValueError:\n",
+        "    print(\"ERROR, solo ingresa numeros enteros, no letras ni caracteres especiales\")\n",
+        "  else:\n",
+        "    for i in range(n):\n",
+        "      nombre = (input(\"Ingrese el nombre \"))\n",
+        "      lista.append(nombre)\n",
+        "    for i in range(0, n):\n",
+        "      print(f\"{[i + 1]}-{lista[i]}\")\n",
+        "nombres()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.- Programa que utilice 2 funciones, funcion que genere y regrese lista con 10 nunmeros aleatorios entre el 30 y 50 (no repetidos). Funcion que reciba una lista e imprimir la lista (Indice y valor)"
+      ],
+      "metadata": {
+        "id": "3EarWs5XRUYF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "def numale():\n",
+        "  try:\n",
+        "    i = 0\n",
+        "    aleat = []\n",
+        "    while i < 10:\n",
+        "      n = random.randint(30, 50)\n",
+        "      if n not in aleat:\n",
+        "        aleat.append(n)\n",
+        "        i = i + 1\n",
+        "  except:\n",
+        "      print(\"ERROR\")\n",
+        "  else:\n",
+        "    return aleat\n"
+      ],
+      "metadata": {
+        "id": "hd6Z8goDTtcG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def imprimir(lista):\n",
+        "  try:\n",
+        "    for i in range(0, 10):\n",
+        "      xnum = (lista[i])\n",
+        "      if xnum is False:\n",
+        "        break\n",
+        "  except:\n",
+        "    print(\"ERROR\")\n",
+        "  else:\n",
+        "    for i, elemento in enumerate(lista):\n",
+        "      print(f\"[{i + 1}]--->[{elemento}]\")\n",
+        "xnum = numale()\n",
+        "imprimir(xnum)"
+      ],
+      "metadata": {
+        "id": "wHJx_rUUWE-p",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3407a05e-c165-4c92-db15-045329dd2b4b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1]--->[44]\n",
+            "[2]--->[32]\n",
+            "[3]--->[42]\n",
+            "[4]--->[36]\n",
+            "[5]--->[40]\n",
+            "[6]--->[45]\n",
+            "[7]--->[47]\n",
+            "[8]--->[39]\n",
+            "[9]--->[49]\n",
+            "[10]--->[50]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.- Escribe una función que reciba dos listas de números del mismo tamaño y calcule la suma de los elementos correspondientes de cada lista. (regresar una nueva lista) . Luego, muestra una lista con los resultados de cada suma. Nota: si las listas no son del mismo tamaño mandar msge y utilizar el tamaño de la lista mas pequeña)"
+      ],
+      "metadata": {
+        "id": "Jvmx9LtuIAfC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def suma():\n",
+        "  try:\n",
+        "    lista1 = []\n",
+        "    lista2 = []\n",
+        "    lista3 = []\n",
+        "    i = 1\n",
+        "    print(\"Dame los numeros de la lista 1 (ambas listas deben tener el MISMO tamaño)\")\n",
+        "    n = 1\n",
+        "    while n != 0:\n",
+        "      n = int(input(f\"Dame el numero {i}: \"))\n",
+        "      lista1.append(n)\n",
+        "      i = i + 1\n",
+        "\n",
+        "    i = 1\n",
+        "    print(\"Dame los numeros de la lista 2 (ambas listas deben tener el MISMO tamaño)\")\n",
+        "    n = 1\n",
+        "    while n != 0:\n",
+        "      n = int(input(f\"Dame el numero {i}: \"))\n",
+        "      lista2.append(n)\n",
+        "      i = i + 1\n",
+        "\n",
+        "    x = len(lista1) - 1\n",
+        "    y = len(lista2) - 1\n",
+        "\n",
+        "    if x == y:\n",
+        "      for i in range (0, x):\n",
+        "        suma = lista1[i] + lista2[i]\n",
+        "        lista3.append(suma)\n",
+        "      print(\"LISTA NUEVA\")\n",
+        "      print(lista3)\n",
+        "\n",
+        "    else:\n",
+        "        print(\"TE DIJE QUE LISTAS DE TAMAÑOS IGUALES\")\n",
+        "        if x > y:\n",
+        "          lista1[y]\n",
+        "          for i in range(0, y):\n",
+        "              suma = lista1[i] + lista2[i]\n",
+        "              lista3.append(suma)\n",
+        "          print(\"NUEVA LISTA\")\n",
+        "          print(lista3)\n",
+        "        else:\n",
+        "          lista2[x]\n",
+        "          for i in range(0, x):\n",
+        "              suma = lista1[i] + lista2[i]\n",
+        "              lista3.append(suma)\n",
+        "          print(\"NUEVA LISTA\")\n",
+        "          print(lista3)\n",
+        "\n",
+        "\n",
+        "  except:\n",
+        "    print(\"ERROR\")\n",
+        "suma()"
+      ],
+      "metadata": {
+        "id": "N4ZGDoAIICGz",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "outputId": "ca0ddac9-046b-47ef-8a63-9f2ff9a6941e"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dame los numeros de la lista 1 (ambas listas deben tener el MISMO tamaño)\n",
+            "Dame el numero 1: 10\n",
+            "Dame el numero 2: 10\n",
+            "Dame el numero 3: 10\n",
+            "Dame el numero 4: 0\n",
+            "Dame los numeros de la lista 2 (ambas listas deben tener el MISMO tamaño)\n",
+            "Dame el numero 1: 10\n",
+            "Dame el numero 2: 10\n",
+            "Dame el numero 3: 10\n",
+            "Dame el numero 4: 10\n",
+            "Dame el numero 5: 0\n",
+            "TE DIJE QUE LISTAS DE TAMAÑOS IGUALES\n",
+            "NUEVA LISTA\n",
+            "[20, 20, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.- Escribe una función llamada eliminar_duplicados que reciba una lista como parámetro y elimine los elementos duplicados. El resultado debe ser una nueva lista sin duplicados. Pide al usuario que ingrese una lista y luego llama a la función eliminar_duplicados para mostrar la lista sin duplicados."
+      ],
+      "metadata": {
+        "id": "xKxfOYRUICjq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def eliminar_duplicados(lista,tam):\n",
+        "  try:\n",
+        "    list2 = []\n",
+        "    z = len(lista)\n",
+        "    for i in range(0, z):\n",
+        "      if lista[i] not in list2:\n",
+        "        list2.append(lista[i])\n",
+        "    print(list2)\n",
+        "\n",
+        "  except:\n",
+        "    print(\"ERROR\")\n"
+      ],
+      "metadata": {
+        "id": "ULn8fwUOIFgp"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "try:\n",
+        "  tam = int(input(\"Cuantos numeros tendra la lista que deseas crear? \"))\n",
+        "  lista = []\n",
+        "  for i in range (0, tam):\n",
+        "    num = int(input(f\"Dame el numero {i + 1}: \"))\n",
+        "    lista.append(num)\n",
+        "except:\n",
+        "  print(\"ERROR\")\n",
+        "eliminar_duplicados(lista,tam)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "y9Y07XO_uIOv",
+        "outputId": "4bec7079-7bdc-4817-a8ef-691c9e1f6078"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cuantos numeros tendra la lista que deseas crear? 6\n",
+            "Dame el numero 1: 1\n",
+            "Dame el numero 2: 1\n",
+            "Dame el numero 3: 2\n",
+            "Dame el numero 4: 2\n",
+            "Dame el numero 5: 3\n",
+            "Dame el numero 6: 3\n",
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.- Escribe una función que calcule la media y la mediana de una lista de números enteros. La media es la suma de todos los elementos y dividido entre la cantidad de elementos. La mediana es el valor que queda en la mitad de la lista cuando se ordena de forma ascendente. Si la lista tiene un número par de elementos, la mediana se calcula como el promedio de los dos valores centrales. Puedes utilizar el método sort() para ordenar la lista y luego calcular la mediana según el tamaño de la lista.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "OY2vA_i_IF6y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def media_mediana():\n",
+        "  try:\n",
+        "    list1 = []\n",
+        "    tama = int(input(\"Cual quieres que sea el tamaño de la lista? \"))\n",
+        "    for i in range(0, tama):\n",
+        "      nume = int(input(f\"Dame el numero {i + 1}:\"))\n",
+        "      list1.append(nume)\n",
+        "\n",
+        "    list1.sort()\n",
+        "    media = sum(list1) / len(list1)\n",
+        "\n",
+        "    if tama % 2 == 1:\n",
+        "      tama = tama + 1\n",
+        "      mitad = tama / 2\n",
+        "\n",
+        "      for i in range(int(mitad)-1, int(mitad)):\n",
+        "        print(f\"Media: {media}\")\n",
+        "        print(f\"Mediana: {list1[i]}\")\n",
+        "    else:\n",
+        "      mitad = tama / 2\n",
+        "      for i in range( int(mitad)-1, int(mitad)):\n",
+        "        medi = (list1[i] + list1[i + 1]) / 2\n",
+        "        print(f\"Media: {media}\")\n",
+        "        print(f\"Mediana: {medi}\")\n",
+        "  except:\n",
+        "    print(\"ERROR\")\n",
+        "media_mediana()"
+      ],
+      "metadata": {
+        "id": "3kKFJJ1JIMVw",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "outputId": "3f07c12a-a3f0-42e7-fe5c-83803c1dca1b"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cual quieres que sea el tamaño de la lista? 6\n",
+            "Dame el numero 1:5\n",
+            "Dame el numero 2:1\n",
+            "Dame el numero 3:4\n",
+            "Dame el numero 4:3\n",
+            "Dame el numero 5:2\n",
+            "Dame el numero 6:3\n",
+            "Media: 3.0\n",
+            "Mediana: 3.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
